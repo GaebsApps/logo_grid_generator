@@ -121,7 +121,7 @@ if uploaded_files:
     st.markdown(
         """
         <style>
-        .element-container div div {
+        .element-container div div, .element-container div div div {
             width: 100%;
             display:flex;
         }
