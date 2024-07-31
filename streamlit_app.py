@@ -107,8 +107,7 @@ st.markdown(
             top: 0;
             left: 0;
             width: 100vw;
-            z-index: 1000000;
-            padding-top: 2rem;
+            padding-top: 3rem;
         }
 
         #logocontainer {
