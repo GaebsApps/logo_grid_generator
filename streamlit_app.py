@@ -121,12 +121,12 @@ if uploaded_files:
     st.markdown(
         """
         <style>
-        .st-emotion-cache-1v0mbdj {
+        .element-container div div {
             width: 100%;
             display:flex;
         }
 
-        .st-emotion-cache-1v0mbdj img {
+        .element-container div div img {
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             margin: auto;
         }
