@@ -121,7 +121,7 @@ if uploaded_files:
     st.markdown(
         """
         <style>
-        div:has(> img) {
+        .element-container div div:has(> img) {
             width: 100%;
             display:flex;
         }
