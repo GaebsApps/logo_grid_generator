@@ -146,7 +146,6 @@ st.markdown(
             @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     
             .appview-container {
-                animation: fadeInSlideUp 1s ease-in-out forwards;
             }
             
             h1 {
