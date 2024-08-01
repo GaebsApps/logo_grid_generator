@@ -75,77 +75,6 @@ st.title("Logo Grid Generator")
 
 st.write("Hey designers 👋 Tired of wasting time aligning sponsor logos? The Logo Grid Generator is your new BFF. Just upload your logos, drag and drop to reorder, tweak the grid with easy sliders, and boom – a perfect logo collage ready to download. Save time, keep your creative mojo, and let this tool handle the boring stuff. 🎨✨")
 
-# Custom CSS for logo positioning
-st.markdown(
-    """
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-        h1 {
-            font-family: "DM Serif Display", serif;
-            color: #000;
-            font-weight: 500;
-            font-size: calc(1.475rem + 3vw);
-            max-font-size: 3rem;
-            margin-top: 80px;
-            margin-bottom: 20px;
-        }
-
-        @media (min-width: 1320px) {
-            h1 {
-                font-size: 4rem;
-            }
-        }
-
-        p {
-            font-family: "Inter", sans-serif;
-        }
-
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            padding-top: 3rem;
-        }
-
-        #logocontainer {
-            max-width: 1320px;
-            margin: auto;
-            padding: 20px;
-            padding-top: 0;
-        }
-
-        #logo {
-            box-shadow: none !important;
-            height: 55px;
-            z-index: 1000000;
-            margin-top: .40625rem;
-            margin-bottom: .40625rem;
-        }
-
-        .element-container div div:has(> img) {
-            width: 100%;
-            display: flex;
-        }
-
-        .element-container div div img {
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-            margin: auto;
-        }
-
-    </style>
-    <div class="navbar">
-        <div id="logocontainer">
-            <a href="https://xn--gbs-qla.com/" target="_blank">
-                <img src="https://xn--gbs-qla.com/assets/images/logo/logo-dark.svg" class="logo" id="logo">
-            </a>
-        </div>
-    </div>
-    """, unsafe_allow_html=True
-)
-
 st.markdown("---")
 st.write("")
 
@@ -207,3 +136,85 @@ if uploaded_files:
 
         # Provide download link
         btn = st.download_button(label="Download Image", data=img_buffer, file_name=file_name, mime="image/png")
+
+
+# Custom CSS
+st.markdown(
+    """
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        h1 {
+            font-family: "DM Serif Display", serif;
+            color: #000;
+            font-weight: 500;
+            font-size: calc(1.475rem + 3vw);
+            max-font-size: 3rem;
+            margin-top: 80px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 1320px) {
+            h1 {
+                font-size: 4rem;
+            }
+        }
+
+        p {
+            font-family: "Inter", sans-serif;
+        }
+
+        header{
+        background: transparent!important;
+        pointer-events: none; /* Allow clicks to pass through */
+        }
+
+        header * {
+        pointer-events: initial;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            padding-top: 0rem;
+            background:white;
+            z-index: 100;
+        }
+
+        #logocontainer {
+            max-width: 1320px;
+            margin: auto;
+            padding: 8px 20px 8px 20px;
+        }
+
+        #logo {
+            box-shadow: none !important;
+            height: 55px;
+            z-index: 1000000000;
+            margin-top: .40625rem;
+            margin-bottom: .40625rem;
+        }
+
+        .element-container div div:has(> img) {
+            width: 100%;
+            display: flex;
+        }
+
+        .element-container div div img {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            margin: auto;
+        }
+
+    </style>
+    <div id="navbar">
+        <div id="logocontainer">
+            <a href="https://xn--gbs-qla.com/" target="_blank">
+                <img src="https://xn--gbs-qla.com/assets/images/logo/logo-dark.svg" class="logo" id="logo">
+            </a>
+        </div>
+    </div>
+    """, unsafe_allow_html=True
+)
