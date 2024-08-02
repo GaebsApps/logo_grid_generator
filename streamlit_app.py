@@ -78,7 +78,7 @@ st.write("Hey designers 👋 Tired of wasting time aligning sponsor logos? The L
 st.markdown("---")
 st.write("")
 
-uploaded_files = st.file_uploader("Upload multiple images", type=["png", "jpg", "jpeg"], accept_multiple_files=True)
+uploaded_files = st.file_uploader("Upload multiple logos", type=["png", "jpg", "jpeg"], accept_multiple_files=True)
 
 if uploaded_files:
     # Create a list of file names
